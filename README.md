@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://peshwarinaan.github.io/frontend-mentor-preview-card/)
+- Solution URL: [Add solution URL here](https://github.com/PeshwariNaan/frontend-mentor-preview-card.git)
+- Live Site URL: [Add live site URL here]( https://peshwarinaan.github.io/frontend-mentor-preview-card/)
 
 ## My process
 
