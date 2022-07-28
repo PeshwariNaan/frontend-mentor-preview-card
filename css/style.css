@@ -1,0 +1,34 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; /* This sets the root font size so 1rem = 10px . The % will be that of the root value of 16px*/
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: "Inter", "Lexend Deca", sans-serif;
+  background-color: hsl(233deg, 47%, 7%);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 120rem;
+  height: 50rem;
+  background-color: hsl(244deg, 38%, 16%);
+  border-radius: 1rem;
+  margin: 20rem auto;
+}
+@media (max-width: 50rem) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
