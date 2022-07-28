@@ -3,7 +3,6 @@
 $color-main-bg: hsl(233, 47%, 7%);
 $color-card-bg: hsl(244, 38%, 16%);
 $color-accent: hsl(277, 64%, 61%);
-$color-test: #c14242;
 
 //COLORS TEXT
 
@@ -11,8 +10,12 @@ $color-main-heading: hsl(0, 0%, 100%);
 $color-main-paragraph: hsla(0, 0%, 100%, 0.75);
 $color-stat-heading: hsla(0, 0%, 100%, 0.6);
 
+// FONTS
+$ff-primary: 'Inter', sans-serif;
+$ff-secondary: 'Lexend Deca', sans-serif;
+
 //Break point for mobile
-$bp-mobile: 50rem;
+$bp-mobile: 30rem;
 
 *,
 *::after,  /*  Use this so the pseudo elements don't get this behavior - good practice*/
@@ -27,8 +30,10 @@ html {
 }
 
 body {
-  
-  font-size: 1.5rem;
-  font-family: 'Inter', 'Lexend Deca', sans-serif;
+  box-sizing: border-box;
+  font-family: $ff-primary, $ff-secondary, sans-serif;
   background-color: $color-main-bg;
+}
+span {
+    white-space: pre;
 }

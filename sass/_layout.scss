@@ -1,13 +1,142 @@
 .container {
   display: flex;
   flex-direction: row;
-  width: 120rem;
-  height: 50rem;
+  max-width: 120rem;
   background-color: $color-card-bg;
   border-radius: 1rem;
   margin: 20rem auto;
 
-  @media (max-width: $bp-mobile) {
+  @media only screen and (max-width: $bp-mobile) {
     flex-direction: column;
+    //height: 100%;
+    //max-height: 100%;
+    //max-width: 35rem;;
   }
 }
+
+.infobox {
+  display: flex;
+  flex-direction: column;
+  padding: 8rem 10rem 8rem 8rem;
+  width: 60rem;
+  order: 1;
+
+  @media only screen and (max-width: $bp-mobile) {
+    order: 2;
+    padding: 8rem 0 0rem 0;
+    width: auto;
+    height: 60vh;
+  }
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.statsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 8rem 5rem 0 0;
+
+  @media only screen and (max-width: $bp-mobile) {
+    flex-direction: column;
+    padding: 2rem 0 4rem 0;
+    height: 100%
+  }
+}
+
+.imageContainer {
+  display: flex;
+  width: 60rem;
+  max-width: 100%;
+  max-height: 100%;
+  background: url(../img/image-header-desktop.jpg) no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 1rem 1rem 0;  // top-left top-right bottom-right bottom-left. 
+  order: 2;
+
+  @media only screen and (max-width: $bp-mobile) {
+    width: auto;
+    height: 30rem;
+    border-radius: 1rem 1rem 0rem 0;  // top-left top-right bottom-right bottom-left. 
+    order: 1;
+  }
+}
+
+.heading {
+  font-family: $ff-primary;
+  font-size: 4rem;
+  color: $color-main-heading;
+
+  @media only screen and (max-width: $bp-mobile) {
+    text-align: center;
+    font-size: 3rem;
+    padding: 0 3rem;
+  }
+}
+
+.paragraph {
+  font-family: $ff-primary;
+  color: $color-main-paragraph;
+  font-size: 1.5rem;
+  line-height: 2;
+  margin: 3rem 2rem 0 0;
+
+  @media only screen and (max-width: $bp-mobile) {
+    text-align: center;
+    margin: 3rem 2rem 0 2rem;
+  }
+}
+
+.stat_paragraph {
+  font-family: $ff-secondary;
+  color: $color-stat-heading;
+  letter-spacing: 0.27rem;
+  line-height: 2;
+
+  @media only screen and (max-width: $bp-mobile) {
+    text-align: center;
+  }
+}
+
+.stat_box {
+  display: flex;
+  flex-direction: column;
+  @media (max-width: $bp-mobile) {
+    
+  }
+}
+
+.stat_number {
+  font-family: 'Lexend Deca';
+  font-size: 2.5rem;
+  color: $color-main-heading;
+
+  @media only screen and (max-width: $bp-mobile) {
+    text-align: center;
+  }
+}
+
+.accent-word {
+  color: $color-accent;
+}
+
+.overlay {
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: $color-accent;
+  opacity: 0.7;
+}
+
+// font-family: 'Inter', sans-serif;
+
+// font-family: 'Lexend Deca', sans-serif;
+
+//filter: opacity(.6) drop-shadow(0 0 0 hsl(277, 64%, 61%));

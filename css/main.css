@@ -1,0 +1,204 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; /* This sets the root font size so 1rem = 10px . The % will be that of the root value of 16px*/
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Inter", sans-serif, "Lexend Deca", sans-serif, sans-serif;
+  background-color: hsl(233deg, 47%, 7%);
+}
+
+span {
+  white-space: pre;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  max-width: 120rem;
+  background-color: hsl(244deg, 38%, 16%);
+  border-radius: 1rem;
+  margin: 20rem auto;
+}
+@media only screen and (max-width: 30rem) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.infobox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 8rem 10rem 8rem 8rem;
+  width: 60rem;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+@media only screen and (max-width: 30rem) {
+  .infobox {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding: 8rem 0 0rem 0;
+    width: auto;
+    height: 60vh;
+  }
+}
+
+.textContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.statsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 8rem 5rem 0 0;
+}
+@media only screen and (max-width: 30rem) {
+  .statsContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 2rem 0 4rem 0;
+    height: 100%;
+  }
+}
+
+.imageContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60rem;
+  max-width: 100%;
+  max-height: 100%;
+  background: url(../img/image-header-desktop.jpg) no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 1rem 1rem 0;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+@media only screen and (max-width: 30rem) {
+  .imageContainer {
+    width: auto;
+    height: 30rem;
+    border-radius: 1rem 1rem 0rem 0;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+.heading {
+  font-family: "Inter", sans-serif;
+  font-size: 4rem;
+  color: hsl(0deg, 0%, 100%);
+}
+@media only screen and (max-width: 30rem) {
+  .heading {
+    text-align: center;
+    font-size: 3rem;
+    padding: 0 3rem;
+  }
+}
+
+.paragraph {
+  font-family: "Inter", sans-serif;
+  color: hsla(0deg, 0%, 100%, 0.75);
+  font-size: 1.5rem;
+  line-height: 2;
+  margin: 3rem 2rem 0 0;
+}
+@media only screen and (max-width: 30rem) {
+  .paragraph {
+    text-align: center;
+    margin: 3rem 2rem 0 2rem;
+  }
+}
+
+.stat_paragraph {
+  font-family: "Lexend Deca", sans-serif;
+  color: hsla(0deg, 0%, 100%, 0.6);
+  letter-spacing: 0.27rem;
+  line-height: 2;
+}
+@media only screen and (max-width: 30rem) {
+  .stat_paragraph {
+    text-align: center;
+  }
+}
+
+.stat_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.stat_number {
+  font-family: "Lexend Deca";
+  font-size: 2.5rem;
+  color: hsl(0deg, 0%, 100%);
+}
+@media only screen and (max-width: 30rem) {
+  .stat_number {
+    text-align: center;
+  }
+}
+
+.accent-word {
+  color: hsl(277deg, 64%, 61%);
+}
+
+.overlay {
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: hsl(277deg, 64%, 61%);
+  opacity: 0.7;
+}
