@@ -8,24 +8,31 @@
 
   @media only screen and (max-width: $bp-mobile) {
     flex-direction: column;
-    //height: 100%;
-    //max-height: 100%;
-    //max-width: 35rem;;
+    margin: auto;
+    height: 85rem;
+    max-width: 40rem;
   }
 }
 
 .infobox {
   display: flex;
+  flex: 0 1 50%;
+  min-height: 100%;
+  max-width: 50%;
   flex-direction: column;
   padding: 8rem 10rem 8rem 8rem;
   width: 60rem;
   order: 1;
 
   @media only screen and (max-width: $bp-mobile) {
-    order: 2;
-    padding: 8rem 0 0rem 0;
-    width: auto;
-    height: 60vh;
+    order: 2; //reorder elements in the flex container
+    flex: 0 0 100%; //Settings to take up a percentage of column flex container
+    max-height: 70%;
+    min-height: 70%;
+    max-width: 100%;
+    padding: 4rem 0 0 0;   
+
+   
   }
 }
 
@@ -42,27 +49,30 @@
 
   @media only screen and (max-width: $bp-mobile) {
     flex-direction: column;
-    padding: 2rem 0 4rem 0;
-    height: 100%
+    padding: 4rem 0 4rem 0;
+    height: 100%;
+    justify-content: unset;
   }
 }
 
 .imageContainer {
   display: flex;
-  width: 60rem;
-  max-width: 100%;
-  max-height: 100%;
+  flex: 0 1 50%;
+  min-height: 100%;
+  max-width: 50%;
   background: url(../img/image-header-desktop.jpg) no-repeat;
   background-size: cover;
   position: relative;
   overflow: hidden;
-  border-radius: 0 1rem 1rem 0;  // top-left top-right bottom-right bottom-left. 
+  border-radius: 0 1rem 1rem 0; // top-left top-right bottom-right bottom-left.
   order: 2;
 
   @media only screen and (max-width: $bp-mobile) {
-    width: auto;
-    height: 30rem;
-    border-radius: 1rem 1rem 0rem 0;  // top-left top-right bottom-right bottom-left. 
+    flex: 0 0 100%;
+    max-height: 30%;
+    min-height: 30%;
+    max-width: 100%;
+    border-radius: 1rem 1rem 0rem 0; // top-left top-right bottom-right bottom-left.
     order: 1;
   }
 }
@@ -92,23 +102,20 @@
   }
 }
 
-.stat_paragraph {
-  font-family: $ff-secondary;
-  color: $color-stat-heading;
-  letter-spacing: 0.27rem;
-  line-height: 2;
-
-  @media only screen and (max-width: $bp-mobile) {
-    text-align: center;
+.accent-word {
+    color: $color-accent;
   }
-}
+
 
 .stat_box {
-  display: flex;
-  flex-direction: column;
-  @media (max-width: $bp-mobile) {
-    
-  }
+    display: flex;
+    flex-direction: column;
+    @media only screen and (max-width: $bp-mobile) {
+        margin: 0 0 3rem 0;
+        :last-child {
+            margin-bottom: 0;
+        }
+      }
 }
 
 .stat_number {
@@ -121,9 +128,19 @@
   }
 }
 
-.accent-word {
-  color: $color-accent;
+.stat_paragraph {
+  font-family: $ff-secondary;
+  color: $color-stat-heading;
+  letter-spacing: 0.27rem;
+  line-height: 2;
+  
+  @media only screen and (max-width: $bp-mobile) {
+    text-align: center;
+  }
 }
+
+
+
 
 .overlay {
   top: 0;
@@ -135,8 +152,3 @@
   opacity: 0.7;
 }
 
-// font-family: 'Inter', sans-serif;
-
-// font-family: 'Lexend Deca', sans-serif;
-
-//filter: opacity(.6) drop-shadow(0 0 0 hsl(277, 64%, 61%));

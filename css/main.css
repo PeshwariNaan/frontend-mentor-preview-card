@@ -35,12 +35,15 @@ span {
   border-radius: 1rem;
   margin: 20rem auto;
 }
-@media only screen and (max-width: 30rem) {
+@media only screen and (max-width: 60rem) {
   .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin: auto;
+    height: 85rem;
+    max-width: 40rem;
   }
 }
 
@@ -48,6 +51,11 @@ span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  min-height: 100%;
+  max-width: 50%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -58,14 +66,18 @@ span {
       -ms-flex-order: 1;
           order: 1;
 }
-@media only screen and (max-width: 30rem) {
+@media only screen and (max-width: 60rem) {
   .infobox {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-    padding: 8rem 0 0rem 0;
-    width: auto;
-    height: 60vh;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-height: 70%;
+    min-height: 70%;
+    max-width: 100%;
+    padding: 4rem 0 0 0;
   }
 }
 
@@ -92,14 +104,17 @@ span {
           justify-content: space-between;
   padding: 8rem 5rem 0 0;
 }
-@media only screen and (max-width: 30rem) {
+@media only screen and (max-width: 60rem) {
   .statsContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 2rem 0 4rem 0;
+    padding: 4rem 0 4rem 0;
     height: 100%;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
   }
 }
 
@@ -107,9 +122,11 @@ span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 60rem;
-  max-width: 100%;
-  max-height: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  min-height: 100%;
+  max-width: 50%;
   background: url(../img/image-header-desktop.jpg) no-repeat;
   background-size: cover;
   position: relative;
@@ -119,10 +136,14 @@ span {
       -ms-flex-order: 2;
           order: 2;
 }
-@media only screen and (max-width: 30rem) {
+@media only screen and (max-width: 60rem) {
   .imageContainer {
-    width: auto;
-    height: 30rem;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-height: 30%;
+    min-height: 30%;
+    max-width: 100%;
     border-radius: 1rem 1rem 0rem 0;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -135,7 +156,7 @@ span {
   font-size: 4rem;
   color: hsl(0deg, 0%, 100%);
 }
-@media only screen and (max-width: 30rem) {
+@media only screen and (max-width: 60rem) {
   .heading {
     text-align: center;
     font-size: 3rem;
@@ -150,23 +171,15 @@ span {
   line-height: 2;
   margin: 3rem 2rem 0 0;
 }
-@media only screen and (max-width: 30rem) {
+@media only screen and (max-width: 60rem) {
   .paragraph {
     text-align: center;
     margin: 3rem 2rem 0 2rem;
   }
 }
 
-.stat_paragraph {
-  font-family: "Lexend Deca", sans-serif;
-  color: hsla(0deg, 0%, 100%, 0.6);
-  letter-spacing: 0.27rem;
-  line-height: 2;
-}
-@media only screen and (max-width: 30rem) {
-  .stat_paragraph {
-    text-align: center;
-  }
+.accent-word {
+  color: hsl(277deg, 64%, 61%);
 }
 
 .stat_box {
@@ -178,19 +191,36 @@ span {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+@media only screen and (max-width: 60rem) {
+  .stat_box {
+    margin: 0 0 3rem 0;
+  }
+  .stat_box :last-child {
+    margin-bottom: 0;
+  }
+}
+
 .stat_number {
   font-family: "Lexend Deca";
   font-size: 2.5rem;
   color: hsl(0deg, 0%, 100%);
 }
-@media only screen and (max-width: 30rem) {
+@media only screen and (max-width: 60rem) {
   .stat_number {
     text-align: center;
   }
 }
 
-.accent-word {
-  color: hsl(277deg, 64%, 61%);
+.stat_paragraph {
+  font-family: "Lexend Deca", sans-serif;
+  color: hsla(0deg, 0%, 100%, 0.6);
+  letter-spacing: 0.27rem;
+  line-height: 2;
+}
+@media only screen and (max-width: 60rem) {
+  .stat_paragraph {
+    text-align: center;
+  }
 }
 
 .overlay {
