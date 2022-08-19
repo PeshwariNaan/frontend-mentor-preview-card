@@ -127,7 +127,7 @@ span {
           flex: 0 1 50%;
   min-height: 100%;
   max-width: 50%;
-  background: url(../img/image-header-desktop.jpg) no-repeat;
+  background-color: hsl(277deg, 64%, 61%);
   background-size: cover;
   position: relative;
   overflow: hidden;
@@ -149,6 +149,11 @@ span {
         -ms-flex-order: 1;
             order: 1;
   }
+}
+
+.desktop-img {
+  display: block;
+  mix-blend-mode: multiply;
 }
 
 .heading {
