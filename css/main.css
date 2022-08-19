@@ -129,8 +129,6 @@ span {
   max-width: 50%;
   background-color: hsl(277deg, 64%, 61%);
   background-size: cover;
-  position: relative;
-  overflow: hidden;
   border-radius: 0 1rem 1rem 0;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
@@ -154,6 +152,8 @@ span {
 .desktop-img {
   display: block;
   mix-blend-mode: multiply;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .heading {
@@ -226,14 +226,4 @@ span {
   .stat_paragraph {
     text-align: center;
   }
-}
-
-.overlay {
-  top: 0;
-  right: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: hsl(277deg, 64%, 61%);
-  opacity: 0.7;
 }
